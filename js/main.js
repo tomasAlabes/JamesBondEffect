@@ -1,34 +1,15 @@
 // @ebidel gist
 // https://gist.github.com/ebidel/3723309
 
-/*
-(function () {
-    function d(a, c) {
-        background.webkitClipPath = "circle(" + a + "px, " + c + "px, " + b + "px)"
-    }
-
-    var b = 120;
-    window.addEventListener("mousemove", function (a) {
-        d(a.pageX, a.pageY)
-    });
-    window.addEventListener("mousewheel", function (a) {
-        if (a.shiftKey) {
-            a.preventDefault();
-            var c = a.wheelDeltaY;
-            b += -c;
-            b = 0 < c ? Math.max(90, b) : Math.min(b, window.innerHeight / 2);
-            d(a.pageX, a.pageY)
-        }
-    })
-})
-();
-*/
-
-// Or paste this in the console and mouse over the page.
-// SHIFT+mousewheel scroll makes the circle bigger/smaller.
-
 (function() {
-    var background = document.getElementById("background"); //$("#background");
+    "use strict";
+
+    var background = document.getElementById("background"),
+        titleHeight = 40,
+        effectMinX = 1109,
+        effectMinY = 339,
+        effectMaxX = 1254,
+        effectMaxY = 470;
 
     var radius = 120; // px
 
@@ -42,7 +23,7 @@
     }
 
     window.addEventListener('mousemove', function(e) {
-        move(e.pageX, e.pageY);
+        move(e.pageX, e.pageY - titleHeight);
     });
 
     // Holding down SHIFT and scrolling grows/shrinks the circle.
@@ -62,5 +43,15 @@
         }
         move(e.pageX, e.pageY);
     });
+
+    background.onclick = function(evt){
+        var x = evt.pageX,
+            y = evt.pageY - 40;
+
+        if(x > effectMinX && y > effectMinY && x < effectMaxX && y < effectMaxY){
+            console.log("Effect");
+        }
+
+    };
 
 })();
