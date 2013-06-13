@@ -4,13 +4,16 @@
 }
 
 html {
-    background: #000000 /*url('../img/gunbarrel.jpg') no-repeat center center fixed*/;
+    background: #000000;
     width: 1024px;
     height: 768px;
     overflow: hidden;
-}
-
-h1 {
     font-family: 'skyFall', 'Arial', sans-serif;
     color: white;
+}
+
+#instructions {
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
