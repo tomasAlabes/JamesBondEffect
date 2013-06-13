@@ -1,0 +1,16 @@
+@font-face {
+    font-family: skyFall;
+    src: url('../fonts/SkyFall.ttf') format('truetype');
+}
+
+html {
+    background: #000000 /*url('../img/gunbarrel.jpg') no-repeat center center fixed*/;
+    width: 1024px;
+    height: 768px;
+    overflow: hidden;
+}
+
+h1 {
+    font-family: 'skyFall', 'Arial', sans-serif;
+    color: white;
+}
