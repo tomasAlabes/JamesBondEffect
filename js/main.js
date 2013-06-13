@@ -45,7 +45,7 @@
         move(e.pageX, e.pageY);
     });
 
-// Holding down SHIFT and scrolling grows/shrinks the circle.
+    // Holding down SHIFT and scrolling grows/shrinks the circle.
     window.addEventListener('mousewheel', function(e) {
         if (!e.shiftKey) {
             return;
