@@ -5,5 +5,5 @@ http://tomasalabes.github.io/JamesBondEffect/
 
 To Do
 
-* Instructions for Shift, Scroll
-* Ideas?
+* Github ribbon
+* Blood effect
