@@ -5,7 +5,8 @@
     "use strict";
 
     var background = document.getElementById("background"),
-        titleHeight = 40,
+        titleHeight = 40, //h1#title height
+        // empiric values
         effectMinX = 1109,
         effectMinY = 339,
         effectMaxX = 1254,
@@ -23,7 +24,7 @@
     }
 
     window.addEventListener('mousemove', function(e) {
-        move(e.pageX, e.pageY - titleHeight);
+        move(e.pageX, e.pageY - titleHeight); // - titleHeight because the listener is the window and we want the coordinates relative to the backgound which is 40px down.
     });
 
     // Holding down SHIFT and scrolling grows/shrinks the circle.
@@ -44,14 +45,22 @@
         move(e.pageX, e.pageY);
     });
 
-    background.onclick = function(evt){
+    /*background.onclick = function(evt){
         var x = evt.pageX,
-            y = evt.pageY - 40;
+            y = evt.pageY - titleHeight;
 
         if(x > effectMinX && y > effectMinY && x < effectMaxX && y < effectMaxY){
-            console.log("Effect");
+            var canvas = document.getElementById('blood');
+            canvas.height = document.height;
+            canvas.width = document.width;
+            canvas.style.display = "";
+
+            var context = canvas.getContext("2d");
+            context.fillStyle = "lightblue";
+            context.fillRect(100, 100, 100, 100);
+            context.arc(150, 150, 50, 0, 2 * Math.PI, true);
         }
 
-    };
+    };*/
 
 })();

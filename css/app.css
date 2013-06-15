@@ -17,3 +17,10 @@ html {
     bottom: 0;
     right: 0;
 }
+
+canvas {
+    /*display: none;*/
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
