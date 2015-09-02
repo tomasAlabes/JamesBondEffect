@@ -3,7 +3,4 @@ James Bond effect using CSS3 clip-path property
 
 http://tomasalabes.github.io/JamesBondEffect/
 
-To Do
-
-* Github ribbon
-* Blood effect
+**It stoped working, something related to browser support of clip-path property with circles. I will try to make it work again sometime (it should be easy...).**
